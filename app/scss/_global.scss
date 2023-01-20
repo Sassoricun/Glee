@@ -1,9 +1,28 @@
+html,
+body {
+  height: 100%;
+
+}
+
 body {
   @extend %rubik-500;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 13;
 }
 
 .container {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+a {
+  @extend %rubik-400;
+  line-height: 24px;
+  font-size: 14px;
+  color: $footer-color;
 }
