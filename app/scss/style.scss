@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -58,6 +59,7 @@
 
 .user-nav {
   display: flex;
+  transform: translateX(-17px);
 
   &__link {
     position: relative;
@@ -176,7 +178,7 @@
   }
 
   &__item-form {
-    max-width: 270px;
+    max-width: 271px;
   }
 
   &__logo {
@@ -268,6 +270,96 @@
     background-color: $footer-color;
     top: 5px;
     left: -14px;
+  }
+}
+
+.top-slider {
+  background-image: url('../images/top-slider-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom 80px right 60px;
+  height: 100%;
+  background-color: #fcd7b6;
+  padding-top: 200px;
+  margin: 0 75px;
+
+  &__content {
+    margin-right: 30px;
+  }
+
+  &__item {
+    display: flex !important;
+    justify-content: center;
+    padding: 0 100px;
+  }
+
+  &__title {
+    max-width: 500px;
+    font-size: 72px;
+    line-height: 70px;
+    color: $title-color;
+    @extend %rubik-500;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    max-width: 360px;
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $default-color;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    max-width: 100%;
+    background-color: #a3bbc8;
+    color: #fff;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    padding: 20px 25px;
+  }
+
+  &__images {
+    height: 100%;
+    transform: translateY(59px);
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    padding-bottom: 40px;
+
+    li {
+      padding: 0 12px;
+
+      button {
+        padding: 0;
+        color: $title-color;
+        font-size: 10px;
+        line-height: 9px;
+        @extend %rubik-500;
+        border: none;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+        opacity: 0.3;
+        cursor: pointer;
+      }
+
+      &.slick-active {
+        button {
+          background-color: #fff;
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 
