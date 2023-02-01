@@ -38,22 +38,27 @@
 
   &__list-item+.menu__list-item {
     margin-left: 30px;
+
   }
 
   &__list-link {
     color: $default-color;
     font-size: 15px;
     line-height: 12px;
+    position: relative;
 
     &:hover::after {
       content: '+';
       margin: 5px;
+      position: absolute;
+
     }
   }
 
   &__list-link--active::after {
     content: '+';
     margin: 5px;
+    position: absolute;
   }
 }
 
@@ -539,21 +544,231 @@
 
 }
 
-@function max($numbers...) {
-  @return m#{a}x(#{$numbers});
+.shop {
+  padding: 70px 0 180px;
+
+  .title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: #191919;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  &__categories {
+    margin-bottom: 80px;
+  }
+
+  &__categories-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__categories-item+.shop__categories-item {
+    margin-left: 30px;
+  }
+
+  &__categories-link {
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: #191919;
+    opacity: 0.7;
+    transition: .3s;
+  }
+
+  &__categories-link:hover {
+    opacity: 1;
+  }
+
+  .categories-link--active:hover {
+    opacity: 1;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 30px;
+  }
 }
 
-@function min($numbers...) {
-  @return m#{i}n(#{$numbers});
+.shop-item {
+  max-width: 270px;
+  text-align: center;
+
+
+  &__img-box {
+    position: relative;
+    height: 380px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__link-box {
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(3000%);
+    transition: all .3s;
+  }
+
+  &__link {
+    background-color: #fff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    path {
+      transition: all .3s;
+    }
+  }
+
+  &__link:hover {
+    transition: all .3s;
+
+    path {
+      fill: #fff;
+    }
+
+    background-color: #a3bbc8;
+  }
+
+  &__link+.shop-item__link {
+    margin-left: 15px;
+  }
+
+  &:hover {
+    .shop-item__link-box {
+      transform: translateY(0)
+    }
+  }
+
+  &__text {
+    padding-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    @extend %dmsans-500;
+    font-size: 16px;
+    line-height: 40px;
+    color: $title-color;
+
+  }
+
+  &__price {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 40px;
+    color: #a3bbc8;
+  }
 }
 
 
 
+.design {
+  padding: 70px 0 120px;
 
+  .title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: #191919;
+    margin-bottom: 35px;
+    text-align: center;
+  }
 
+  &__categories {
+    margin-bottom: 80px;
+  }
 
+  &__categories-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  &__categories-item+.design__categories-item {
+    margin-left: 30px;
+  }
 
+  &__categories-link {
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: #191919;
+    opacity: 0.7;
+    transition: .3s;
+  }
+
+  &__categories-link:hover {
+    opacity: 1;
+  }
+
+  .design__categories-link--active:hover {
+    opacity: 1;
+  }
+}
+
+.design-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px 30px;
+
+  .design-item {
+    position: relative;
+
+    &__text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @extend %dmsans-700;
+      margin: 30px 30px;
+
+      .design-item__title {
+        font-size: 20px;
+        color: #191919;
+      }
+
+      .design-item__class {
+        font-size: 16px;
+        color: #a3bbc8;
+      }
+    }
+  }
+}
+
+.partners {
+  padding: 90px 0;
+
+  &::before {
+    content: '';
+    height: 500px;
+    background-color: #fef7f0;
+    position: absolute;
+    height: 400px;
+    display: block;
+    z-index: -1;
+    width: 100%;
+  }
+
+  &__list {
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
 
 

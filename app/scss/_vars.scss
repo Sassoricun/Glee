@@ -61,3 +61,11 @@ $footer-color: #7b7b7b;
   border: 1px solid #a3bbc8;
   border-radius: 5px;
 }
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
