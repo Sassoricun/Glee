@@ -532,6 +532,7 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 500px;
+  margin-bottom: 110px;
 
   &__popup {
     max-width: 1920px;
@@ -748,19 +749,116 @@
   }
 }
 
-.partners {
-  padding: 90px 0;
+.articles {
+  position: relative;
 
   &::before {
     content: '';
     height: 500px;
     background-color: #fef7f0;
     position: absolute;
-    height: 400px;
+    height: 450px;
     display: block;
     z-index: -1;
     width: 100%;
+    bottom: 0;
   }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+
+    &-title {
+      @extend %dmsans-700;
+      color: #191919;
+      font-size: 36px;
+    }
+
+    &-view {
+      font-size: 16px;
+      @extend %dmsans-700;
+      color: #191919;
+      padding-right: 10px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 370px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 5px;
+
+    &-news {
+      position: absolute;
+      @extend %poppins-700;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      background-color: #a3bbc8;
+      border-radius: 50px;
+      padding: 10px 30px;
+      bottom: 170px;
+      left: 30px;
+    }
+
+    &-text {
+      @extend %dmsans-500;
+      font-size: 18px;
+      color: #262626;
+      max-width: 300px;
+      width: 100%;
+      height: 80px;
+      border-bottom: 1px solid #e0e0e0;
+      margin: 35px 0 0 30px;
+    }
+
+    &-info {
+      max-width: 230px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0 25px 30px;
+      @extend %rubik-400;
+      font-size: 12px;
+      line-height: 30px;
+      color: #222933;
+    }
+  }
+
+  &__item-data,
+  &__item-autor {
+    &::before {
+      content: '';
+      margin-right: 5px;
+      width: 12px;
+      height: 14px;
+      left: 0;
+      top: 0;
+      display: inline-block;
+    }
+  }
+
+  &__item-data::before {
+    content: '';
+    background-image: url('../images/icons/calendar-data.svg');
+  }
+
+  &__item-autor::before {
+    content: '';
+    background-image: url('../images/icons/user-autor.svg');
+  }
+
+}
+
+.partners {
+  padding: 45px 0;
 
   &__list {
     height: 170px;
