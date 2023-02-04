@@ -754,7 +754,6 @@
 
   &::before {
     content: '';
-    height: 500px;
     background-color: #fef7f0;
     position: absolute;
     height: 450px;
@@ -806,6 +805,7 @@
       padding: 10px 30px;
       bottom: 170px;
       left: 30px;
+      text-transform: uppercase;
     }
 
     &-text {
@@ -868,9 +868,147 @@
   }
 }
 
+.top {
+  background-color: #edf1f4;
+  margin-bottom: 120px;
+  padding: 30px 0;
+  text-align: center;
+
+  &__title {
+    @extend %rubik-400;
+    font-size: 36px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    color: #222933;
+  }
+
+  .breadcrumbs {
+    display: inline-flex;
+    justify-content: center;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      padding-right: 20px;
+      position: relative;
+      @extend %rubik-400;
+      color: #222933;
+      font-size: 14px;
+      line-height: 24px;
 
 
+      &::before {
+        content: '/';
+        position: absolute;
+        top: 0;
+        left: -15px;
+      }
 
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:first-child {
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  max-width: 470px;
+  margin: 0 auto 120px;
+  @extend %rubik-400;
+  font-size: 14px;
+  line-height: 48px;
+  color: #436372;
+
+  &__label {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    background-color: #fff;
+    height: 60px;
+    padding: 0 15px;
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 48px;
+    color: #436372;
+    border-bottom: 1px solid #f6f6f6;
+  }
+
+  &__lost {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 48px;
+    color: #436372;
+  }
+
+  &__btn {
+    margin-top: 30px;
+    display: block;
+    @extend %rubik-500;
+    color: #fff;
+    background-color: #a3bbc8;
+    font-size: 18px;
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__noregister {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 48px;
+    color: #436372;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  &__btn-create {
+    display: block;
+    @extend %rubik-500;
+    color: $title-color;
+    font-size: 18px;
+    border: 2px solid #a3bbc8;
+    background-color: #fff;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.articles-partners {
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: #fef7f0;
+    position: absolute;
+    height: 250px;
+    display: block;
+    z-index: -1;
+    width: 100%;
+    bottom: 0;
+  }
+}
 
 
 
