@@ -1010,6 +1010,244 @@
   }
 }
 
+.about {
+  &__top {
+    display: flex;
+    margin-bottom: 120px;
+  }
+
+  &__infoside {
+    margin: 80px 0 90px 50px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__num {
+    @extend %rubik-500;
+    font-size: 140px;
+    line-height: 32px;
+    color: #a3bbc8;
+    margin-right: 30px;
+  }
+
+  &__subtitle {
+    width: 90px;
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $title-color;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 32px;
+    color: $title-color;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $title-color;
+    padding-bottom: 70px;
+    border-bottom: 2px solid #e6eaf0;
+  }
+
+  &__achivement {
+    margin-top: 40px;
+    position: relative;
+
+    &-items {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &-item::before {
+      position: absolute;
+      top: 10px;
+      margin-left: -50px;
+    }
+
+    &-item--one::before {
+      content: '';
+      background-image: url('../images/icons/about-top1.svg');
+      width: 36px;
+      height: 37px;
+    }
+
+    &-item--two::before {
+      content: '';
+      background-image: url('../images/icons/about-top2.svg');
+      width: 43px;
+      height: 39px;
+    }
+
+    &-item--three::before {
+      content: '';
+      background-image: url('../images/icons/about-top3.svg');
+      width: 41px;
+      height: 40px;
+    }
+
+    &-item--one::after {
+      content: '';
+      border-right: 1px solid #e6eaf0;
+      height: 80px;
+      position: absolute;
+      top: -5px;
+      margin-left: 100px;
+    }
+
+    &-item--two::after {
+      content: '';
+      border-right: 1px solid #e6eaf0;
+      height: 80px;
+      position: absolute;
+      top: -5px;
+      margin-left: 100px;
+    }
+
+    &-title {
+      @extend %dmsans-700;
+      font-size: 36px;
+      line-height: 38px;
+      color: $title-color;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      font-size: 16px;
+      line-height: 17px;
+      color: #4c4c4c;
+      @extend %dmsans-700;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    background-color: #fcd7b6;
+    width: 100%;
+    height: 320px;
+    z-index: -1;
+  }
+
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 85px !important;
+    @extend %dmsans-700;
+    color: $title-color;
+    text-align: -webkit-center;
+    line-height: 32px;
+  }
+
+  &__icon,
+  &__list-title {
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+
+  &__list-subtitle {
+    font-size: 18px;
+  }
+
+  .team {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 0 170px;
+
+    &__text {
+      max-width: 300px;
+      width: 100%;
+    }
+
+    &__title {
+      @extend %dmsans-700;
+      font-size: 36px;
+      line-height: 38px;
+      color: $title-color;
+      margin-bottom: 30px;
+    }
+
+    &__subtext {
+      @extend %rubik-400;
+      font-size: 16px;
+      line-height: 30px;
+      color: $title-color;
+      margin-bottom: 30px;
+    }
+
+    &__link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 200px;
+      max-width: 100%;
+      background-color: #a3bbc8;
+      color: #fff;
+      font-size: 15px;
+      line-height: 12px;
+      padding: 20px 25px;
+      border-radius: 5px;
+      @extend %poppins-700;
+    }
+
+    &__galery {
+      display: grid;
+      min-height: 320px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 100px 30px;
+    }
+
+    &__hero {
+      position: relative;
+    }
+
+    &__info {
+      display: flex;
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      padding: 30px 25px;
+      background-color: #fff;
+      box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    }
+
+    &__name {
+      margin-right: 60px;
+
+      &-person {
+        color: #436372;
+        @extend %dmsans-700;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 15px;
+      }
+
+      &-status {
+        color: #565872;
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+
+    &__social {
+      display: flex;
+    }
+
+    &__social-icon+.team__social-icon {
+      margin-left: 8px;
+    }
+  }
+}
 
 
 
