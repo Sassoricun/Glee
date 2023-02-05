@@ -1249,6 +1249,45 @@
   }
 }
 
+.information {
+  margin-bottom: 120px;
+
+  p {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $title-color;
+  }
+
+  .ourtext {
+    &__title {
+      @extend %rubik-500;
+      font-size: 24px;
+      line-height: 40px;
+      color: $title-color;
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      @extend %rubik-400;
+      font-size: 16px;
+      line-height: 30px;
+      color: $title-color;
+      margin-bottom: 40px;
+      list-style-position: inside;
+      list-style-type: decimal-leading-zero;
+
+    }
+
+    &__item {
+      margin-bottom: 20px;
+    }
+
+    &__collects {
+      margin-bottom: 50px;
+    }
+  }
+}
 
 
 
