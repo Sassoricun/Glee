@@ -6,7 +6,13 @@ $(function () {
     ratedFill: "#ffcc00",
     spacing: "5px",
     readOnly: true,
-
+  });
+  $('.star-list').rateYo({
+    starWidth: "20px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    spacing: "15px",
+    readOnly: true,
   });
 
   $('.filter-price__input').ionRangeSlider({
