@@ -1,0 +1,74 @@
+.modal {
+  max-width: 470px;
+  margin: 0 auto 120px;
+  @extend %rubik-400;
+  font-size: 14px;
+  line-height: 48px;
+  color: #436372;
+
+  &__label {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    background-color: #fff;
+    height: 60px;
+    padding: 0 15px;
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 48px;
+    color: #436372;
+    border-bottom: 1px solid #f6f6f6;
+  }
+
+  &__lost {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 48px;
+    color: #436372;
+  }
+
+  &__btn {
+    margin-top: 30px;
+    display: block;
+    @extend %rubik-500;
+    color: #fff;
+    background-color: #a3bbc8;
+    font-size: 18px;
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__noregister {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 48px;
+    color: #436372;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  &__btn-create {
+    display: block;
+    @extend %rubik-500;
+    color: $title-color;
+    font-size: 18px;
+    border: 2px solid #a3bbc8;
+    background-color: #fff;
+    width: 100%;
+    cursor: pointer;
+  }
+}

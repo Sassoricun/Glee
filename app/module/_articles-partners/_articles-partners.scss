@@ -1,0 +1,26 @@
+.partners {
+  padding: 45px 0;
+
+  &__list {
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+.articles-partners {
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: #fef7f0;
+    position: absolute;
+    height: 250px;
+    display: block;
+    z-index: -1;
+    width: 100%;
+    bottom: 0;
+  }
+}
