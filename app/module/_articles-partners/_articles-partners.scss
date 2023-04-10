@@ -24,3 +24,45 @@
     bottom: 0;
   }
 }
+
+@media(max-width: 820px) {
+  .partners {
+    &__list {
+      flex-wrap: wrap;
+      justify-content: center;
+
+    }
+
+    &__item {
+      margin: 10px 35px;
+    }
+  }
+}
+
+@media(max-width: 680px) {
+  .articles-partners {
+    &::before {
+      height: 330px;
+    }
+  }
+
+  .partners {
+    &__list {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media(max-width: 560px) {
+  .articles-partners {
+    &::before {
+      height: 450px;
+    }
+  }
+
+  .partners {
+    &__list {
+      margin-bottom: 220px;
+    }
+  }
+}

@@ -93,3 +93,93 @@
     color: #585858;
   }
 }
+
+@media(max-width: 1400px) {
+  .info {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-around;
+
+    &__item {
+      margin-top: 0;
+      padding-left: 30px;
+
+      &::before {
+        position: inherit;
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+
+    &__item-delivery {
+      &::before {
+        background-repeat: no-repeat;
+        padding-bottom: 50px;
+      }
+    }
+
+    &__item-payment {
+      &::after {
+        right: 37%;
+      }
+    }
+  }
+}
+
+@media(max-width: 960px) {
+  .info {
+    display: block;
+    background-color: #fff;
+
+    &__item {
+      background-color: #fef7f0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    br {
+      display: none;
+    }
+
+    &__item-delivery {
+      border-top: 1px solid #e8e4df;
+      border-bottom: 1px solid #e8e4df;
+    }
+  }
+}
+
+@media(max-width: 790px) {
+  .info {
+    margin: 0 20px;
+  }
+}
+
+@media(max-width: 560px) {
+  .info {
+    &__item {
+      padding-left: 20px;
+    }
+  }
+}
+
+@media(max-width: 370px) {
+  .info {
+    margin: 0 10px;
+
+    &__item-title {
+      line-height: 25px;
+    }
+
+    &__item {
+      padding-right: 10px;
+    }
+
+    &__item-text {
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 10px;
+    }
+  }
+}

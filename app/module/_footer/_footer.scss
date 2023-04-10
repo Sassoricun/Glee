@@ -36,6 +36,7 @@
     font-size: 16px;
     line-height: 21px;
     margin-bottom: 25px;
+    pointer-events: none;
   }
 
   &__link {
@@ -82,6 +83,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   &__copy {
     @extend %rubik-400;
@@ -107,5 +109,74 @@
     background-color: $footer-color;
     top: 5px;
     left: -14px;
+  }
+}
+
+@media(max-width: 1120px) {
+  .footer-top {
+    flex-wrap: wrap;
+
+    &__item-form {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media(max-width: 960px) {
+  .footer-top {
+    &__contact {
+      margin-right: 0;
+    }
+
+    &__nav {
+      margin-right: 0;
+    }
+  }
+}
+
+@media(max-width: 630px) {
+  .footer-top {
+    &__nav {
+      margin-right: 0;
+    }
+  }
+
+  .footer-bottom {
+    justify-content: center;
+
+    &__copy {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media(max-width: 370px) {
+
+
+  .footer-top {
+    &__list {
+      display: none;
+    }
+
+    &__title {
+      pointer-events: auto;
+    }
+
+
+    &__form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__form-input {
+      max-width: 100%;
+    }
+
+    &__form-btn {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 }
